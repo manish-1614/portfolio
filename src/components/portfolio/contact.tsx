@@ -50,7 +50,7 @@ export function Contact() {
           Get In <span className="text-primary">Touch</span>
         </h2>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          Have a project in mind? Let's discuss how I can help bring your ideas to life
+          Have a project in mind? Let`s discuss how I can help bring your ideas to life
         </p>
       </div>
 

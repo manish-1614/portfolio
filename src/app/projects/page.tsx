@@ -1,6 +1,8 @@
+'use client'
+
 import { Header } from "@/components/portfolio/header";
 import { Footer } from "@/components/portfolio/footer";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,10 +18,10 @@ import project3 from "../../public/project3.jpg";
 // import project5 from "../../public/project5.jpg";
 // import project6 from "../../public/project6.jpg";
 
-export const metadata: Metadata = {
-  title: "Projects | Professional Portfolio",
-  description: "Browse through my portfolio of web development projects and applications",
-};
+// export const metadata: Metadata = {
+//   title: "Projects | Professional Portfolio",
+//   description: "Browse through my portfolio of web development projects and applications",
+// };
 
 // Extended project data for the dedicated projects page
 const projectsData = [
