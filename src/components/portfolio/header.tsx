@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "@/components/portfolio/theme-toggle";
+import { Homemade_Apple } from "next/font/google";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -15,14 +16,20 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
+const homemadeapple = Homemade_Apple({
+  variable: "--font-homemadeapple",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="container flex justify-between items-center py-4">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="font-serif text-xl font-bold">
-            Portfolio
+        <div className="mx-4">
+          <Link href="/" className={`mx-4 text-2xl ${homemadeapple.variable}`}>
+            Manish Prajapati
           </Link>
         </div>
 
