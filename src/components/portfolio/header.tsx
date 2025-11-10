@@ -57,12 +57,12 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <nav className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-4 mt-8 mx-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-foreground/70 hover:text-primary transition duration-200 py-2"
+                  className="text-foreground/70 hover:text-primary hover:bg-secondary transition duration-200 py-2 px-2 rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

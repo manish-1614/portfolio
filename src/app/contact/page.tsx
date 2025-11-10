@@ -12,7 +12,7 @@ export default function ContactPage() {  return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 pt-24 pb-20 w-full mx-auto">
-        <div className="container mb-12">
+        <div className="container mb-12 mx-auto px-2">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             Get In <span className="text-primary">Touch</span>
           </h1>

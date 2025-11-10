@@ -44,7 +44,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 container">
+    <section id="contact" className="py-20 container mx-auto px-2">
       <div className="flex flex-col gap-2 mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold">
           Get In <span className="text-primary">Touch</span>
@@ -67,7 +67,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <p>hello@example.com</p>
+                <p>mkprajapati@zohomail.in</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -76,7 +76,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Phone</p>
-                <p>+1 (555) 123-4567</p>
+                <p>+91 8210134128</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -85,7 +85,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
-                <p>San Francisco, CA</p>
+                <p>Kadru kumhartoli, Ranchi</p>
               </div>
             </div>
           </CardContent>
@@ -99,7 +99,7 @@ export function Contact() {
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
                     name="name"

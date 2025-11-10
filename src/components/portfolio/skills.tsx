@@ -41,7 +41,7 @@ export function Skills() {
 
 			<div className="mx-auto w-full md:w-3/4 lg:w-1/2">
 				<Card className="border-border bg-card">
-					<Tabs defaultValue="frontend" className="w-full">
+					<Tabs defaultValue="frontend" className="w-full px-0.5">
 						<TabsList className="grid w-full grid-cols-3 bg-muted">
 							<TabsTrigger value="frontend">Frontend</TabsTrigger>
 							<TabsTrigger value="backend">Backend</TabsTrigger>

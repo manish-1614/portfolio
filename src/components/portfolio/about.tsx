@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="py-20 container">
+    <section id="about" className="py-20 container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <Image

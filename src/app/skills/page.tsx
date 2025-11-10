@@ -4,7 +4,7 @@ import { Skills } from "@/components/portfolio/skills";
 import { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check } from "lucide-react";
+import { Check, CheckCheckIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Skills | Professional Portfolio",
@@ -16,7 +16,7 @@ export default function SkillsPage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 pt-24 pb-20 w-full mx-auto">
-        <div className="container">
+        <div className="container mx-auto px-2">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             My <span className="text-primary">Skills</span>
           </h1>
@@ -100,9 +100,9 @@ export default function SkillsPage() {
                 "Attention to Detail",
                 "User-Centered Thinking"
               ].map((skill, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 bg-muted/50 rounded-md">
-                  <div className="p-1 bg-primary/10 rounded-full">
-                    <Check className="h-4 w-4 text-primary" />
+                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-md">
+                  <div className="p-1 bg-sidebar-primary/10 rounded-full">
+                    <Check className="h-4 w-4 text-accent-foreground" />
                   </div>
                   <span>{skill}</span>
                 </div>
