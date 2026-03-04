@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   basePath: isProd ? '/portfolio' : '',
   images: {
     unoptimized: true,
-  };
+  }
+};
 
-  export default nextConfig;
+export default nextConfig;

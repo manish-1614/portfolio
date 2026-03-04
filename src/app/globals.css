@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #fdfbf7;
+  /* Ghibli-inspired warm cream */
+  --foreground: #0f172a;
+  /* Deep Slate (Slate 900) - for high contrast/readability */
+}
+
+.dark {
+  --background: #020617;
+  /* High-end dark (slate-950) */
+  --foreground: #f1f5f9;
+  /* Slate 100 */
+}
+
+
+@layer base {
+
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-slate-200);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .dark *,
+  .dark ::after,
+  .dark ::before {
+    border-color: var(--color-slate-800);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  /* Force readability for titles in light mode */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-900 dark:text-white;
+  }
 }
