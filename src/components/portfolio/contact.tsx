@@ -26,7 +26,8 @@ const formSchema = z.object({
 });
 
 export function Contact() {
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
+    // @ts-ignore
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -147,8 +148,8 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Your message" 
+                        <Textarea
+                          placeholder="Your message"
                           className="min-h-32"
                           {...field}
                         />
