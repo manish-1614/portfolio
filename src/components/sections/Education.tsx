@@ -33,16 +33,18 @@ export function Education({ education }: EducationProps) {
                         >
                             <div className="space-y-4">
                                 <div className="flex justify-between items-start gap-4">
-                                    <div className="space-y-1">
-                                        <h4 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                                    <div className="flex-[2] min-w-0 space-y-1 pr-4">
+                                        <h4 className="text-xl font-bold text-slate-900 dark:text-white leading-tight break-words">
                                             {item.course}
                                         </h4>
-                                        <p className="text-blue-700 dark:text-blue-400 text-sm font-semibold">
+                                        <p className="text-blue-700 dark:text-blue-400 text-sm font-semibold break-words">
                                             {item.name}
                                         </p>
                                     </div>
-                                    <div className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono font-bold whitespace-nowrap">
-                                        {item.score}
+                                    <div className="flex-[1] min-w-0 flex justify-end items-start">
+                                        <span className="self-start px-3 py-2 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono font-bold text-center break-words max-w-[10rem]">
+                                            {item.score}
+                                        </span>
                                     </div>
                                 </div>
 

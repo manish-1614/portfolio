@@ -16,10 +16,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manish Kumar Prajapati | Senior Full Stack Engineer",
+  title: "Manish Kumar Prajapati | mkprajapati@zohomail.in",
   description: "Portfolio of Manish Kumar Prajapati - Senior Full Stack Engineer specializing in Distributed Systems, AI Agents, and Scalable Backend Architecture.",
   keywords: ["Manish Kumar Prajapati", "Full Stack Engineer", "Distributed Systems", "AI Agents", "Java", "C++", "Spring Boot", "React", "Portfolio"],
   authors: [{ name: "Manish Kumar Prajapati" }],
+  icons: {
+    icon: "https://res.cloudinary.com/dyfthf6kw/image/upload/v1716019538/codehelpDir/MP_initials_ai1k0p.ico",
+    shortcut: "https://res.cloudinary.com/dyfthf6kw/image/upload/v1716019538/codehelpDir/MP_initials_ai1k0p.ico",
+  },
   openGraph: {
     title: "Manish Kumar Prajapati | Senior Full Stack Engineer",
     description: "Senior Full Stack Engineer specializing in Distributed Systems & AI Agents",

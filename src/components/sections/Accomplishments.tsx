@@ -145,9 +145,34 @@ export function Accomplishments({ certs, accs, affiliated, list }: Accomplishmen
                                 key={idx}
                                 className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col items-center text-center space-y-4 hover:border-amber-500/20 hover:bg-amber-500/5 transition-all shadow-sm dark:shadow-none"
                             >
-                                <div className="relative w-20 h-20 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 group-hover:scale-110 transition-transform shadow-inner">
-                                    {/* Badge Image Icon Placeholder */}
-                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 dark:text-slate-600 group-hover:text-amber-500 transition-colors"><path d="M12 15l-2 5l-2-5l-5-2l5-2l2-5l2 5l5 2z"></path></svg>
+                                <div className="relative w-20 h-20 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 group-hover:scale-110 transition-transform shadow-inner overflow-hidden">
+                                    {badge.imageurl ? (
+                                        <img
+                                            src={badge.imageurl}
+                                            alt={badge.title}
+                                            className="w-full h-full object-contain p-1"
+                                            onError={(e) => {
+                                                const target = e.currentTarget;
+                                                target.style.display = 'none';
+                                                const fallback = target.nextElementSibling as HTMLElement | null;
+                                                if (fallback) fallback.style.display = 'block';
+                                            }}
+                                        />
+                                    ) : null}
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        style={{ display: badge.imageurl ? 'none' : 'block' }}
+                                        className="text-slate-400 dark:text-slate-600 group-hover:text-amber-500 transition-colors"
+                                    >
+                                        <path d="M12 15l-2 5l-2-5l-5-2l5-2l2-5l2 5l5 2z"></path>
+                                    </svg>
                                 </div>
                                 <div className="space-y-1">
                                     <h4 className="text-slate-900 dark:text-slate-200 text-sm font-bold leading-tight line-clamp-2">

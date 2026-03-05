@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { SectionWrapper } from '../layout/SectionWrapper';
 import { TechIcon } from '../ui/TechIcon';
 
@@ -56,12 +57,18 @@ export function Hero() {
                     </div>
 
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
-                        <button className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all shadow-lg shadow-blue-500/25">
+                        <Link
+                            href="/experience"
+                            className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all shadow-lg shadow-blue-500/25"
+                        >
                             View Experience
-                        </button>
-                        <button className="px-8 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold transition-all">
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="px-8 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold transition-all"
+                        >
                             Contact Me
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

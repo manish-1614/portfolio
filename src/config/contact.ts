@@ -3,8 +3,8 @@ export interface ContactConfig {
     phone: string;
 }
 
-const email = process.env.CONTACT_EMAIL || "contact@yourbusiness.com";
-const phone = process.env.CONTACT_PHONE || "+1 (555) 000-0000";
+const email = process.env.CONTACT_EMAIL || "mkprajapati@zohomail.in";
+const phone = process.env.CONTACT_PHONE || "+91 8210134128";
 
 export const CONTACT_CONFIG: ContactConfig = {
     email,

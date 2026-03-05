@@ -76,6 +76,7 @@ export const skillchips = pgTable('skillchips', {
 
 export const techstackicons = pgTable('techstackicons', {
     reacticon: varchar('reacticon', { length: 255 }).primaryKey(),
+    label: varchar('label', { length: 100 }),
 });
 
 export const workexperiences = pgTable('workexperiences', {

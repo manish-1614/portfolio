@@ -12,6 +12,7 @@ interface SkillChip {
 
 interface TechStackIcon {
     reacticon: string;
+    label: string | null;
 }
 
 interface SkillsProps {
@@ -88,7 +89,9 @@ export function Skills({ rated, chips, icons }: SkillsProps) {
                             </h4>
                             <div className="grid grid-cols-4 sm:grid-cols-6 gap-6">
                                 {icons.map((icon) => {
-                                    const label = icon.reacticon.split('/').pop()?.replace(/^Fa|^Si|^Tb|^Ai/, '') || icon.reacticon;
+                                    const label = icon.label
+                                        ?? icon.reacticon.split('/').pop()?.replace(/^(Fa|Si|Tb|Ai)/, '').replace(/^Brand/, '')
+                                        ?? icon.reacticon;
                                     return (
                                         <div
                                             key={icon.reacticon}
