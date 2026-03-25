@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { SectionWrapper } from '../layout/SectionWrapper';
+import { getAssetPath } from '@/lib/utils';
 
 export function LiveWebsites() {
     const websites = [
@@ -36,7 +37,7 @@ export function LiveWebsites() {
                         >
                             <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
                                 <Image
-                                    src={site.thumbnail}
+                                    src={getAssetPath(site.thumbnail)}
                                     alt={site.title}
                                     fill
                                     className="object-cover transition-transform group-hover:scale-105"

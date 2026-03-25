@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SectionWrapper } from '../layout/SectionWrapper';
 import { TechIcon } from '../ui/TechIcon';
+import { getAssetPath } from '@/lib/utils';
 
 export function Hero() {
     const stats = [
@@ -77,7 +78,7 @@ export function Hero() {
                     <div className="absolute inset-0 border border-slate-200 dark:border-slate-800 rounded-3xl bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm -rotate-3"></div>
                     <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center">
                         <Image
-                            src="/hero.webp"
+                            src={getAssetPath("/hero.webp")}
                             alt="Manish Kumar Prajapati profile"
                             fill
                             className="object-cover"
