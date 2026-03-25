@@ -76,8 +76,13 @@ export function Hero() {
                     <div className="absolute inset-0 bg-blue-500/10 rounded-3xl rotate-6 blur-2xl"></div>
                     <div className="absolute inset-0 border border-slate-200 dark:border-slate-800 rounded-3xl bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm -rotate-3"></div>
                     <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center">
-                        {/* Placeholder for actual image - using a generic user icon for now */}
-                        <TechIcon reacticon="fa/FaUserAlt" size={120} className="text-slate-300 dark:text-slate-700" />
+                        <Image
+                            src="/hero.webp"
+                            alt="Manish Kumar Prajapati profile"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </div>
             </div>

@@ -10,8 +10,8 @@ export function Navbar() {
 
     const navItems = [
         { label: 'Home', href: '/' },
-        { label: 'Journey', href: '/journey' },
-        { label: 'Expertise', href: '/expertise' },
+        { label: 'Experience', href: '/experience' },
+        { label: 'Knowledge', href: '/knowledge' },
         { label: 'Insights', href: '/blog' },
         { label: 'Contact', href: '/contact' },
     ];
