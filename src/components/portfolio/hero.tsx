@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
-import profileImage from "../../public/profile-image.jpg"
+const profileImage = "/profile-image.jpg";
 import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 

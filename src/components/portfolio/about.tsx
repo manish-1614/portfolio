@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import aboutImage from "../../public/about-image.jpg"
+const aboutImage = "/about-image.jpg";
 import { ArrowRight, Download, GraduationCap, Briefcase } from "lucide-react";
 import Link from "next/link";
 

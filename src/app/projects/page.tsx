@@ -10,13 +10,13 @@ import { ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 import Link from "next/link";
 
-// Import images statically to ensure they load
-import project1 from "../../public/project1.jpg";
-import project2 from "../../public/project2.jpg";
-import project3 from "../../public/project3.jpg";
-// import project4 from "../../public/project4.jpg";
-// import project5 from "../../public/project5.jpg";
-// import project6 from "../../public/project6.jpg";
+// Project images — served from public/ at root URL
+const project1 = "/project1.jpg";
+const project2 = "/project2.jpg";
+const project3 = "/project3.jpg";
+// const project4 = "/project4.jpg";
+// const project5 = "/project5.jpg";
+// const project6 = "/project6.jpg";
 
 // export const metadata: Metadata = {
 //   title: "Projects | Professional Portfolio",
