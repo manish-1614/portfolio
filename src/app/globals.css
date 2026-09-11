@@ -57,3 +57,62 @@
     @apply text-slate-900 dark:text-white;
   }
 }
+
+@keyframes travelingPulse {
+  0% {
+    stroke-dashoffset: 140;
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes sonarPing {
+  0% {
+    r: 8px;
+    opacity: 0.9;
+  }
+  100% {
+    r: 32px;
+    opacity: 0;
+  }
+}
+
+@keyframes terminalJitter {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-1.5px, 1px);
+  }
+  40% {
+    transform: translate(1.5px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1.5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.pulse-path {
+  will-change: stroke-dashoffset;
+}
+
+.sonar-wave {
+  animation: sonarPing 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  transform-origin: center;
+}
+
+.terminal-jitter {
+  animation: terminalJitter 0.15s ease-in-out infinite;
+}

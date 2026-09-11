@@ -2,12 +2,21 @@ import { db } from '../index';
 import { links } from '../schema';
 
 export async function getLinks() {
+    if (!db) {
+        return [
+            { text: 'GitHub', url: 'https://github.com/manish-1614', reacticon: 'FaGithub' },
+            { text: 'LinkedIn', url: 'https://linkedin.com/in/manish-1614', reacticon: 'FaLinkedin' },
+            { text: 'Email', url: 'mailto:mkprajapati@zohomail.in', reacticon: 'FaEnvelope' },
+        ];
+    }
     try {
         const allLinks = await db.select().from(links);
         return allLinks;
     } catch (error) {
-        // Log and re-throw to allow higher-level error boundaries or catch blocks to handle it
-        console.error('Error fetching links:', error);
-        throw new Error('Critical failure: Could not fetch navigation/social links from database');
+        return [
+            { text: 'GitHub', url: 'https://github.com/manish-1614', reacticon: 'FaGithub' },
+            { text: 'LinkedIn', url: 'https://linkedin.com/in/manish-1614', reacticon: 'FaLinkedin' },
+            { text: 'Email', url: 'mailto:mkprajapati@zohomail.in', reacticon: 'FaEnvelope' },
+        ];
     }
 }

@@ -1,7 +1,5 @@
 'use client'
 
-import { Header } from "@/components/portfolio/header";
-import { Footer } from "@/components/portfolio/footer";
 // import { Metadata } from "next";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -78,8 +76,7 @@ const projectsData = [
 export default function ProjectsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1 pt-24 pb-20 w-full mx-auto">
+      <main className="flex-1 pt-12 pb-20 w-full mx-auto">
         <div className="container mx-auto px-2">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             My <span className="text-primary">Projects</span>
@@ -149,7 +146,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

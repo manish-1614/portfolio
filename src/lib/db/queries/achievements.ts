@@ -2,6 +2,9 @@ import { db } from '../index';
 import { accomplishment, affiliated_badges, badges_list, blog, certificate, deeds, recognition } from '../schema';
 
 export async function getCertificates() {
+    if (!db) {
+        return { certs: [], accs: [] };
+    }
     try {
         const [certs, accs] = await Promise.all([
             db.select().from(certificate),
@@ -9,12 +12,14 @@ export async function getCertificates() {
         ]);
         return { certs, accs };
     } catch (error) {
-        console.error('Error fetching certificates:', error);
         return { certs: [], accs: [] };
     }
 }
 
 export async function getBadges() {
+    if (!db) {
+        return { affiliated: [], list: [] };
+    }
     try {
         const [affiliated, list] = await Promise.all([
             db.select().from(affiliated_badges),
@@ -22,22 +27,43 @@ export async function getBadges() {
         ]);
         return { affiliated, list };
     } catch (error) {
-        console.error('Error fetching badges:', error);
         return { affiliated: [], list: [] };
     }
 }
 
 export async function getBlogs() {
+    if (!db) {
+        return [
+            {
+                title: 'Building Smriti: Zero-Fabrication Retrieval and Resilience Cascades',
+                page: 'dev.to',
+                time: '2024',
+                url: 'https://dev.to',
+                description: 'A deep dive into deterministic emotional gating, in-process cosine similarity, and 503 backoff cascades.',
+                iconname: 'SiDevdotto'
+            },
+            {
+                title: 'Distributed System Architecture: CQRS & Event Sourcing with Kafka',
+                page: 'dev.to',
+                time: '2023',
+                url: 'https://dev.to',
+                description: 'Patterns for high-throughput transactional consistency across microservices.',
+                iconname: 'SiApachekafka'
+            }
+        ];
+    }
     try {
         const blogs = await db.select().from(blog);
         return blogs;
     } catch (error) {
-        console.error('Error fetching blogs:', error);
         return [];
     }
 }
 
 export async function getCommunity() {
+    if (!db) {
+        return { deeds: [], recognition: [] };
+    }
     try {
         const [deedsData, recognitionData] = await Promise.all([
             db.select().from(deeds),
@@ -45,7 +71,6 @@ export async function getCommunity() {
         ]);
         return { deeds: deedsData, recognition: recognitionData };
     } catch (error) {
-        console.error('Error fetching community data:', error);
         return { deeds: [], recognition: [] };
     }
 }

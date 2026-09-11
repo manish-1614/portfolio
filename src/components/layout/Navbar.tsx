@@ -9,11 +9,12 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { label: 'Home', href: '/' },
-        { label: 'Experience', href: '/experience' },
-        { label: 'Knowledge', href: '/knowledge' },
-        { label: 'Insights', href: '/blog' },
-        { label: 'Contact', href: '/contact' },
+        { label: 'Architecture', href: '/#hero-compile' },
+        { label: 'Case Studies', href: '/#case-studies' },
+        { label: 'Systems', href: '/#systems' },
+        { label: 'Technical Craft', href: '/#craft' },
+        { label: 'Writing', href: '/#writing' },
+        { label: 'Contact', href: '/#contact' },
     ];
 
     return (
