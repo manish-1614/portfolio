@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manish Prajapati — Senior IC Engineering Portfolio
 
-## Getting Started
+> **Core Positioning:** *"I build AI systems the way I build backend systems — for production, not for demos."*
 
-First, run the development server:
+Production engineering portfolio of Manish Prajapati, senior full-stack and systems engineer specializing in high-throughput distributed backends, CRM platforms, and production-grade agentic AI systems.
+
+- **Live URL:** [manishprajapati.co.in](https://manishprajapati.co.in)
+- **Primary Source Case Study:** [Smriti — Digital Memorial Companion](https://github.com/manish-1614/smriti-memorial-companion)
+
+---
+
+## 🏛️ Architecture & Craft Standards
+
+This site is built to reflect the craftsmanship of a senior individual contributor (IC) backend and systems engineer:
+
+- **Topological System Visualization:** Interactive request-lifecycle signal graphs rendered using stateful SVG coordinate viewports and deterministic component state — avoiding gratuitous visual gimmickry in favor of transparent architectural communication.
+- **Layout Stability:** Fixed-ratio SVG viewports and structured layout containers guaranteeing sub-0.01 Cumulative Layout Shift (CLS).
+- **Accessibility & Contrast:** WCAG 2.2 AA compliance across all UI components, with 7:1+ AAA contrast ratios on all core reading copy and strict keyboard navigation.
+- **Honest Engineering Tradeoffs:** Every featured system documents real-world constraints, fallback mechanics, and architectural compromises rather than asserted perfection.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Server Components)
+- **UI & Runtime:** [React 19](https://react.dev/), [TypeScript 5](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/), Radix UI Primitives, Lucide Icons
+- **Database & ORM:** [Neon Postgres](https://neon.tech/) Serverless, [Drizzle ORM](https://orm.drizzle.team/)
+- **Motion & Visualization:** Inline SVG graph engines, CSS keyframe topological pulses, and composited transitions
+
+---
+
+## 🧭 Narrative Sections
+
+1. **Hero (Compile + The Trace):** Interactive request lifecycle through an in-process vector retrieval and prompt-gating pipeline.
+2. **Case Studies (Smriti):** Production memorial companion built on zero-fabrication retrieval architecture, in-process cosine similarity, and multi-tier model fallover cascades.
+3. **Production Systems at Scale:** High-throughput transactional CRM systems, partition-tolerant event streams (Kafka), and outbox-pattern deduplication.
+4. **Technical Craft & Disciplines:** Working principles and architectural standards across AI systems, distributed backends, frontend stability, and reliability engineering.
+5. **Writing & Architecture Notes:** Published deep-dives on Command Query Responsibility Segregation (CQRS), event sourcing, and grounded AI retrieval.
+6. **Direct Contact:** Channels for remote senior IC engineering roles.
+
+---
+
+## 💻 Local Development
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v20+ recommended)
+- [pnpm](https://pnpm.io/) (`npm install -g pnpm`)
+
+### Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 1. Clone repository
+git clone https://github.com/manish-1614/portfolio.git
+cd portfolio
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Start development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & Production Verification
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Typecheck and production bundle
+pnpm build
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run production server
+pnpm start
+```

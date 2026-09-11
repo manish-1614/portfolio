@@ -28,15 +28,15 @@ export function AlsoBuiltSection() {
   ];
 
   return (
-    <section id="also-built" className="py-24 px-4 md:px-8 max-w-6xl mx-auto border-t border-slate-800/80">
+    <section id="also-built" className="py-24 px-4 md:px-8 max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80">
       <div className="space-y-4 mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-slate-800 text-slate-300 border border-slate-700">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
           <span>03 // Selected Builds & Utilities</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
           Also Built
         </h2>
-        <p className="text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed">
+        <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed">
           Targeted production tools, utilities, and client platforms engineered with clean design and pragmatic performance.
         </p>
       </div>
@@ -45,34 +45,34 @@ export function AlsoBuiltSection() {
         {toolsAndProjects.map((item, idx) => (
           <div
             key={idx}
-            className="rounded-xl border border-slate-800 bg-slate-900/30 p-6 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-colors"
+            className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/30 p-6 flex flex-col justify-between space-y-4 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm dark:shadow-none"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono text-sky-400">{item.type}</span>
+                <span className="text-xs font-mono text-sky-600 dark:text-sky-400">{item.type}</span>
                 <Link
                   href={item.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-white transition-colors"
+                  className="text-slate-400 hover:text-slate-900 dark:text-slate-500 dark:hover:text-white transition-colors"
                   aria-label={`View ${item.title} source`}
                 >
                   <ExternalLink className="w-4 h-4" />
                 </Link>
               </div>
-              <h3 className="text-base font-bold text-white font-mono">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white font-mono">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 {item.description}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80">
+            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-200 dark:border-slate-800/80">
               {item.tech.map((t, i) => (
                 <span
                   key={i}
-                  className="px-2 py-0.5 rounded text-[10px] font-mono text-slate-400 bg-slate-800/60 border border-slate-700/50"
+                  className="px-2 py-0.5 rounded text-[10px] font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50"
                 >
                   {t}
                 </span>

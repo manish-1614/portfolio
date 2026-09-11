@@ -38,17 +38,25 @@ export async function getBlogs() {
                 title: 'Building Smriti: Zero-Fabrication Retrieval and Resilience Cascades',
                 page: 'dev.to',
                 time: '2024',
-                url: 'https://dev.to',
+                url: 'https://dev.to/manish_prajapati_cfaed027/smriti-what-if-you-could-talk-to-them-just-one-more-time-449p',
                 description: 'A deep dive into deterministic emotional gating, in-process cosine similarity, and 503 backoff cascades.',
                 iconname: 'SiDevdotto'
             },
             {
-                title: 'Distributed System Architecture: CQRS & Event Sourcing with Kafka',
+                title: "Distributed System Architecture: CQRS & Event Sourcing with Kafka",
                 page: 'dev.to',
-                time: '2023',
-                url: 'https://dev.to',
+                time: '2024',
+                url: 'https://dev.to/manish-1614/cqrs-the-design-pattern-thats-changing-the-game-and-how-you-can-use-it-too-jp8',
                 description: 'Patterns for high-throughput transactional consistency across microservices.',
                 iconname: 'SiApachekafka'
+            },
+            {
+                title: 'Authentication Failure for IMAP and POP3 Using Client Credential Flow for OAuth2',
+                page: 'Microsoft Tech Community',
+                time: '2022',
+                url: 'https://techcommunity.microsoft.com/discussions/microsoft-365/authentication-failure-for-imap-and-pop3-using-client-credential-flow-for-oauth2/3576825',
+                description: 'Deep dive into OAuth2 client credential flow token lifecycles, service principal permissions, and protocol scope handling.',
+                iconname: 'SiMicrosoft'
             }
         ];
     }

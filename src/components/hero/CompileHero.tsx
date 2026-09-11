@@ -144,7 +144,7 @@ export function CompileHero() {
     const t1 = setTimeout(() => {
       setActiveEdgeIds(['edge-1-2', 'edge-1-4']);
 
-      // Branch B: Tone regex (<1ms) snaps immediately to Node 4 and latches
+      // Branch B: Tone regex (synchronous in-process) snaps immediately to Node 4 and latches
       const t2 = setTimeout(() => {
         setIsToneLatched(true);
       }, 300);
@@ -248,7 +248,7 @@ export function CompileHero() {
       <section
         ref={heroRef}
         id="hero-compile"
-        className="sticky top-0 h-screen w-full flex flex-col justify-center items-center px-4 py-8 text-center overflow-hidden bg-slate-950 text-slate-100"
+        className="sticky top-0 h-screen w-full flex flex-col justify-center items-center px-4 py-8 text-center overflow-hidden bg-[#fdfbf7] dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300"
         aria-label="Hero Section"
       >
         {/* Screen Reader Parity */}
@@ -256,16 +256,16 @@ export function CompileHero() {
 
         {/* Main Narrative & Positioning */}
         <header className="max-w-3xl mx-auto space-y-3 mb-4 z-10">
-          <p className="text-xs md:text-sm font-mono tracking-widest text-sky-400 uppercase font-semibold">
+          <p className="text-xs md:text-sm font-mono tracking-widest text-sky-600 dark:text-sky-400 uppercase font-semibold">
             Manish Prajapati // Senior IC Engineer
           </p>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
             I build AI systems the way I build backend systems —{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 dark:from-sky-400 dark:to-indigo-400">
               for production, not for demos.
             </span>
           </h1>
-          <p className="text-xs md:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
             Zero-fabrication retrieval architecture, deterministic emotional gating, and failover cascades.
             Hover over any node or click below to inspect the verified request lifecycle.
           </p>

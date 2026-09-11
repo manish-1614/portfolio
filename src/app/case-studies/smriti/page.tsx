@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { SMRITI_CASE_STUDY } from '@/lib/content/smriti';
 import { DecisionCallout } from '@/components/case-study/DecisionCallout';
@@ -14,44 +14,44 @@ export default function SmritiCaseStudyPage() {
   const data = SMRITI_CASE_STUDY;
 
   return (
-    <article className="min-h-screen bg-slate-950 text-slate-200 py-16 px-4 md:px-8">
+    <article className="min-h-screen bg-[#fdfbf7] dark:bg-slate-950 text-slate-800 dark:text-slate-200 py-16 px-4 md:px-8 transition-colors">
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Navigation Breadcrumb */}
         <nav className="flex items-center gap-3 text-xs font-mono text-slate-500">
-          <Link href="/" className="hover:text-sky-400 transition-colors">
+          <Link href="/" className="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
             ← Back to System Architecture
           </Link>
           <span>/</span>
-          <span className="text-slate-400">Case Studies</span>
+          <span className="text-slate-500 dark:text-slate-400">Case Studies</span>
           <span>/</span>
-          <span className="text-sky-400">Smriti</span>
+          <span className="text-sky-600 dark:text-sky-400">Smriti</span>
         </nav>
 
         {/* Case Study Header */}
-        <header className="space-y-6 border-b border-slate-800 pb-12">
+        <header className="space-y-6 border-b border-slate-200 dark:border-slate-800 pb-12">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">
+            <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
               Flagship Project
             </span>
-            <span className="text-xs font-mono text-slate-400">
+            <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
               Status: {data.status}
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white">
             {data.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
             {data.subtitle}
           </p>
 
-          <div className="p-4 rounded-xl border border-sky-900/40 bg-sky-950/20 text-xs font-mono space-y-1">
-            <p className="text-sky-300">
-              <strong className="text-white">Technical Descriptor: </strong>
+          <div className="p-4 rounded-xl border border-sky-200 dark:border-sky-900/40 bg-sky-50 dark:bg-sky-950/20 text-xs font-mono space-y-1">
+            <p className="text-sky-800 dark:text-sky-300">
+              <strong className="text-slate-900 dark:text-white">Technical Descriptor: </strong>
               "{data.technicalDescriptor.primary}" / "{data.technicalDescriptor.secondary}"
             </p>
-            <p className="text-rose-400/90 italic">
+            <p className="text-rose-600 dark:text-rose-400/90 italic">
               <strong>Forbidden framing: </strong>
               {data.technicalDescriptor.forbidden}
             </p>

@@ -156,9 +156,9 @@ export const ConstellationNode: React.FC<ConstellationNodeProps> = ({
       )}
 
       {isLatched && (
-        <g transform={`translate(${cx - 40}, ${cy - 28})`}>
+        <g transform={`translate(${cx - 55}, ${cy - 28})`}>
           <rect
-            width={80}
+            width={110}
             height={16}
             rx={3}
             fill="#831843"
@@ -166,12 +166,12 @@ export const ConstellationNode: React.FC<ConstellationNodeProps> = ({
             strokeWidth={1}
           />
           <text
-            x={40}
+            x={55}
             y={11}
             textAnchor="middle"
-            className="text-[8px] font-mono font-bold fill-pink-200 tracking-wider uppercase"
+            className="text-[7.5px] font-mono font-bold fill-pink-200 tracking-wider uppercase"
           >
-            LATCHED &lt;1ms
+            LATCHED // IN-PROCESS
           </text>
         </g>
       )}

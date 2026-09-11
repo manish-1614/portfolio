@@ -51,7 +51,7 @@ Full facts and verification notes: `content/case-studies/smriti.md`. Sequence & 
 2. **Query embedded** — `gemini-embedding-2-preview` — **branches in parallel with 4**
 3. **Memory retrieval** — in-process cosine similarity, top 5 selected.
 4. **Tone detected** — deterministic rule-based regex classifier (`lib/language-analysis.ts`).
-   - *Locked timing:* **True asymmetric timing**. Branch B (Tone, <1ms) snaps instantly to Node 4 and pulses in a 'ready / latched' state while Branch A (Embedding ~100ms + Retrieval ~10ms) traverses Nodes 2 & 3.
+   - *Locked timing:* **True asymmetric timing**. Branch B (Tone, synchronous in-process regex) snaps instantly to Node 4 and pulses in a 'ready / latched' state while Branch A (Embedding ~100ms + In-process Retrieval) traverses Nodes 2 & 3.
 5. **Grounded + toned prompt** — merge point, receives from both 3 and 4 once Branch A arrives.
 6. **Generation attempt & Resilience Cascade** — includes the **visible failure-and-reroute flicker**:
    - *Locked visual behavior:* Node 6 flashes amber with an inline `503 UNAVAIL` telemetry chip, stutters for 600ms (matching the exact backoff in `lib/gemini.ts`), then flips green to `200 OK (gemini-3.6-flash)` before routing onward.
@@ -82,7 +82,7 @@ Data model for implementation: each node needs `id`, `stepNumber`, `label`, `cat
 ## Performance & accessibility budgets (locked)
 
 - **LCP:** < 1.2s (Hero portrait preloaded in WebP/AVIF, dimensions statically reserved).
-- **CLS:** 0.00 (SVG coordinate viewBox prevents layout shifts).
+- **CLS:** Sub-0.01 (SVG coordinate viewBox prevents layout shifts).
 - **FID / INP:** < 50ms (GSAP timeline runs on compositor-only properties).
 - **Bundle overhead:** Total motion runtime < 35KB gzipped.
-- **Accessibility:** WCAG 2.2 AAA color contrast for telemetry text, 100% keyboard navigable, reduced-motion bypass.
+- **Accessibility:** WCAG 2.2 AA compliance (with AAA contrast on core content), 100% keyboard navigable, reduced-motion bypass.
